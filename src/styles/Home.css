@@ -1,0 +1,246 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: inherit;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0 0 0;
+}
+
+.link {
+    width: 85%;
+    background-color: rgb(0, 12, 48);
+    color: white;
+    padding: 4px 6px;
+    border: 0px solid black;
+    font-size: 14px;
+}
+
+.link:focus {
+    border: 0px solid black;
+}
+
+.link-container > button {
+    background: none;
+    border: 0px solid black;
+    font-size: 16px;
+    margin: 0 5px 0 0;
+    color: white;
+}
+
+.link-container > button:hover {
+    color: rgb(201, 201, 201);
+}
+
+.event-creator-form {
+    margin: 15% 0 0 0;
+    background: #001757;
+    background: linear-gradient(175deg, rgba(0, 23, 87, 1) 0%, rgba(0, 15, 77, 1) 52%, rgba(0, 25, 69, 1) 100%);
+}
+
+.event-creator-form > textarea {
+    background-color: rgba(0, 12, 46, 1);
+    color: white;
+    min-height: 100px;
+    resize: vertical;
+}
+
+.event-creator-form > button {
+    margin-top: 10px;
+}
+
+.error {
+    display: none;
+    color: red;
+    margin: 4px 0 0 0;
+    font-size: 14px;
+}
+
+.link-option-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link-option {
+    display: flex;
+    color: white;
+    padding: 10px 0 0 0;
+    margin: 0 1rem 0 0;
+}
+
+.link-option > input {
+    margin: 0 0 0 5px;
+    vertical-align: -1px;
+}
+
+.fa-apple {
+    font-size: 20px;
+}
+
+.modal-dialog {
+    margin: 5rem auto !important;
+    padding: 0 1rem;
+}
+
+.modal-backdrop.show {
+    opacity: .2 !important;
+}
+
+.modal-content {
+    background: #001757;
+    background: linear-gradient(175deg, rgba(0, 23, 87, 1) 0%, rgba(0, 15, 77, 1) 52%, rgba(0, 25, 69, 1) 100%);
+    border: 2px solid rgb(0, 0, 109) !important;
+    background-clip: border-box !important;
+}
+
+.modal-body > h2 {
+    color: white;
+    font-size: 20px;
+}
+
+.modal-body > p {
+    font-size: 14px;
+}
+
+.modal-footer {
+    border-top: 1px solid rgb(0, 0, 29) !important;
+}
+
+/* 320px - Extra small devices */
+@media (min-width: 320px) {
+    .home-container {
+        padding: 0 0.75rem;
+    }
+
+    .event-creator-form {
+        margin: 20% 0 0 0;
+    }
+
+    .event-creator-form > textarea {
+        min-height: 80px;
+        font-size: 14px;
+    }
+
+    .link {
+        font-size: 12px;
+        padding: 3px 5px;
+    }
+
+    .link-container > button {
+        font-size: 14px;
+    }
+
+    .modal-dialog {
+        margin: 3rem auto !important;
+    }
+
+    .modal-body > h2 {
+        font-size: 18px;
+    }
+}
+
+/* 640px - Small devices */
+@media (min-width: 640px) {
+    .home-container {
+        padding: 0 1rem;
+    }
+
+    .event-creator-form {
+        margin: 12% 0 0 0;
+    }
+
+    .event-creator-form > textarea {
+        min-height: 100px;
+        font-size: 15px;
+    }
+
+    .link {
+        font-size: 14px;
+    }
+
+    .link-container > button {
+        font-size: 16px;
+        margin: 0 8px 0 0;
+    }
+
+    .modal-dialog {
+        margin: 8rem auto !important;
+    }
+
+    .modal-body > h2 {
+        font-size: 20px;
+    }
+}
+
+/* 768px - Medium devices (tablets) */
+@media (min-width: 768px) {
+    .home-container {
+        padding: 0 1.5rem;
+    }
+
+    .event-creator-form {
+        margin: 10% 0 0 0;
+    }
+
+    .event-creator-form > textarea {
+        min-height: 120px;
+        font-size: 16px;
+    }
+
+    .link {
+        font-size: 15px;
+    }
+
+    .link-container > button {
+        font-size: 18px;
+        margin: 0 10px 0 0;
+    }
+
+    .modal-dialog {
+        margin: 12rem auto !important;
+    }
+
+    .modal-body > h2 {
+        font-size: 22px;
+    }
+}
+
+/* 1024px - Large devices (desktops) */
+@media (min-width: 1024px) {
+    .event-creator-form {
+        margin: 8% 0 0 0;
+    }
+
+    .event-creator-form > textarea {
+        min-height: 140px;
+    }
+
+    .modal-dialog {
+        margin: 15rem auto !important;
+    }
+
+    .modal-body > h2 {
+        font-size: 24px;
+    }
+}
+
+/* 1280px - Extra large devices */
+@media (min-width: 1280px) {
+    .modal-dialog {
+        margin: 18rem auto !important;
+    }
+}
+
+/* 1536px - 2XL devices */
+@media (min-width: 1536px) {
+    .event-creator-form > textarea {
+        min-height: 120px;
+    }
+}

@@ -1,0 +1,209 @@
+.account-edit-form {
+    margin: 15% 0 0 0;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Divider with fade effect */
+.divider-line {
+    height: 1px;
+    margin: 0 0 1rem 0;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(128, 128, 128, 0.6) 20%,
+        rgba(128, 128, 128, 0.6) 80%,
+        transparent
+    );
+}
+
+/* Scrolling placeholder */
+.scrolling-placeholder-wrapper {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+.scrolling-placeholder-input {
+    background: transparent !important;
+    position: relative;
+    z-index: 1;
+}
+
+.scrolling-placeholder-input:focus {
+    background: #fff !important;
+}
+
+.scrolling-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 0.75rem;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+    background: #fff !important;
+}
+
+.scrolling-placeholder span {
+    color: #474747;
+    white-space: nowrap;
+    animation: scroll-placeholder 8s linear infinite;
+    font-size: 14px;
+}
+
+@keyframes scroll-placeholder {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.scrolling-placeholder-input:focus + .scrolling-placeholder {
+    display: none;
+}
+
+.form-control:focus {
+    border-color: none;
+    box-shadow: none;
+}
+
+.account-edit-form .input-group-text {
+    font-size: 13px;
+    min-width: 110px;
+}
+
+.account-edit-form .form-control {
+    font-size: 14px;
+}
+
+.account-edit-form .btn {
+    font-size: 14px;
+}
+
+.account-edit-form .alert {
+    font-size: 13px;
+    padding: 0.5rem 0.75rem;
+}
+
+/* 320px - Extra small devices */
+@media (min-width: 320px) {
+    .account-edit-form {
+        margin: 20% 0 0 0;
+        width: 92%;
+        padding: 1rem !important;
+    }
+
+    .account-edit-form .input-group-text {
+        font-size: 11px;
+        min-width: 90px;
+        padding: 0.375rem 0.5rem;
+    }
+
+    .account-edit-form .form-control {
+        font-size: 13px;
+    }
+
+    .account-edit-form .btn {
+        font-size: 13px;
+    }
+
+    .scrolling-placeholder span {
+        font-size: 12px;
+    }
+}
+
+/* 640px - Small devices */
+@media (min-width: 640px) {
+    .account-edit-form {
+        margin: 15% 0 0 0;
+        width: 75%;
+        max-width: 420px;
+        padding: 1.25rem !important;
+    }
+
+    .account-edit-form .input-group-text {
+        font-size: 13px;
+        min-width: 110px;
+    }
+
+    .account-edit-form .form-control {
+        font-size: 14px;
+    }
+
+    .scrolling-placeholder span {
+        font-size: 13px;
+    }
+}
+
+/* 768px - Medium devices (tablets) */
+@media (min-width: 768px) {
+    .account-edit-form {
+        margin: 12% 0 0 0;
+        width: 60%;
+        max-width: 450px;
+        padding: 1.5rem !important;
+    }
+
+    .account-edit-form .input-group-text {
+        font-size: 14px;
+        min-width: 130px;
+    }
+
+    .account-edit-form .form-control {
+        font-size: 15px;
+    }
+
+    .account-edit-form .btn {
+        font-size: 15px;
+    }
+
+    .scrolling-placeholder span {
+        font-size: 14px;
+    }
+}
+
+/* 1024px - Large devices (desktops) */
+@media (min-width: 1024px) {
+    .account-edit-form {
+        margin: 10% 0 0 0;
+        width: 45%;
+        max-width: 480px;
+        padding: 2rem !important;
+    }
+
+    .account-edit-form .input-group-text {
+        font-size: 15px;
+        min-width: 140px;
+    }
+
+    .account-edit-form .form-control {
+        font-size: 16px;
+    }
+
+    .account-edit-form .btn {
+        font-size: 16px;
+    }
+}
+
+/* 1280px - Extra large devices */
+@media (min-width: 1280px) {
+    .account-edit-form {
+        width: 35%;
+        max-width: 500px;
+    }
+}
+
+/* 1536px - 2XL devices */
+@media (min-width: 1536px) {
+    .account-edit-form {
+        width: 30%;
+        max-width: 520px;
+    }
+}

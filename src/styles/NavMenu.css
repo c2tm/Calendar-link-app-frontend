@@ -1,0 +1,94 @@
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    right: 0.5rem;
+    top: 4rem;
+    border: 2px solid white;
+    background: #001757;
+    background: linear-gradient(175deg, rgba(0, 23, 87, 1) 0%, rgba(0, 15, 77, 1) 52%, rgba(0, 25, 69, 1) 100%);
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    z-index: 100;
+    min-width: 120px;
+}
+
+.nav-menu > a {
+    text-decoration: none;
+    color: white;
+    padding: 4px 0;
+}
+
+.nav-menu > a:hover {
+    color: rgb(185, 185, 185);
+}
+
+/* 320px - Extra small devices */
+@media (min-width: 320px) {
+    .nav-menu {
+        right: 0.5rem;
+        top: 4rem;
+        padding: 8px;
+        font-size: 13px;
+        min-width: 100px;
+    }
+
+    .nav-menu > a {
+        padding: 3px 0;
+    }
+}
+
+/* 640px - Small devices */
+@media (min-width: 640px) {
+    .nav-menu {
+        right: 1rem;
+        padding: 10px;
+        font-size: 14px;
+        min-width: 120px;
+    }
+
+    .nav-menu > a {
+        padding: 4px 0;
+    }
+}
+
+/* 768px - Medium devices (tablets) */
+@media (min-width: 768px) {
+    .nav-menu {
+        right: 1.5rem;
+        top: 4.5rem;
+        padding: 12px;
+        font-size: 15px;
+        min-width: 140px;
+    }
+
+    .nav-menu > a {
+        padding: 5px 0;
+    }
+}
+
+/* 1024px - Large devices (desktops) */
+@media (min-width: 1024px) {
+    .nav-menu {
+        right: 2rem;
+        font-size: 16px;
+        min-width: 150px;
+    }
+}
+
+/* 1280px - Extra large devices */
+@media (min-width: 1280px) {
+    .nav-menu {
+        padding: 14px;
+    }
+}
+
+/* 1536px - 2XL devices */
+@media (min-width: 1536px) {
+    .nav-menu {
+        padding: 16px;
+        min-width: 160px;
+    }
+}
