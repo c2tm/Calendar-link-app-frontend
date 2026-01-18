@@ -46,18 +46,13 @@ const Home = ({}) => {
     }
 
     const downloadLink = (link) => {
-        // window.open(link, '_blank').focus();
-        // in the actual click handler (no await before this)
-        const link2 = String(link).trim();
-
-        // best: simulate a real user link click
-        const a = document.createElement("a");
-        a.href = link2;
-        a.target = "_blank";
-        a.rel = "noopener";
+        const a = document.createElement('a');
+        a.href = link;
+        a.download = '';
+        a.rel = 'noopener noreferrer';
         document.body.appendChild(a);
         a.click();
-        a.remove();
+        document.body.removeChild(a);
     }
 
     const handleSubscribeButton = () => {
