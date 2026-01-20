@@ -101,13 +101,13 @@
     }
 
     .account-edit-form .input-group-text {
-        font-size: 11px;
+        font-size: 16px;
         min-width: 90px;
         padding: 0.375rem 0.5rem;
     }
 
     .account-edit-form .form-control {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .account-edit-form .btn {
@@ -115,7 +115,7 @@
     }
 
     .scrolling-placeholder span {
-        font-size: 12px;
+        font-size: 16px;
     }
 }
 
@@ -129,16 +129,16 @@
     }
 
     .account-edit-form .input-group-text {
-        font-size: 13px;
+        font-size: 16px;
         min-width: 110px;
     }
 
     .account-edit-form .form-control {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .scrolling-placeholder span {
-        font-size: 13px;
+        font-size: 16px;
     }
 }
 
@@ -152,20 +152,20 @@
     }
 
     .account-edit-form .input-group-text {
-        font-size: 14px;
+        font-size: 16px;
         min-width: 130px;
     }
 
     .account-edit-form .form-control {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .account-edit-form .btn {
-        font-size: 15px;
+        font-size: 1px;
     }
 
     .scrolling-placeholder span {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
