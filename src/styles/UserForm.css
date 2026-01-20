@@ -34,7 +34,7 @@
 /* 320px - Extra small devices */
 @media (min-width: 320px) {
     .user-form > input {
-        font-size: 14px;
+        font-size: 16px;
         padding: 0.4rem;
     }
 
@@ -53,7 +53,7 @@
 /* 640px - Small devices */
 @media (min-width: 640px) {
     .user-form > input {
-        font-size: 15px;
+        font-size: 16px;
         padding: 0.5rem;
     }
 
