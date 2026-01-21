@@ -11,18 +11,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy, faFileExport } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
 import { useNavigate } from "react-router-dom";
+import ErrorModal from "../components/ErrorModal.jsx";
 
 const Home = ({}) => {
     const [eventDetails, setEventDetails] = useState("");
     const [showLinkModal, setShowLinkModal] = useState("");
     const [showSubscribeModal, setShowSubscribeModal] = useState("");
     const [links, setLinks] = useState([]);
-    const navigate = useNavigate();
-
-    // link types
-
     const [google, setGoogle] = useState(false);
     const [ical, setIcal] = useState(false);
+    const [showErrModal, setShowErrModal] = useState(false);
+    const [errStatus, setErrStatus] = useState(false);
+    const navigate = useNavigate();
 
     const handleCloseLinkModal = () => {
         setShowLinkModal(false);
@@ -88,6 +88,12 @@ const Home = ({}) => {
         }
 
         const parsedResponse = JSON.parse(await res.data);
+
+        if(!parsedResponse['links'] || Object.keys(parsedResponse['links']).length === 0) {
+            setErrStatus("emptylinklist");
+            setShowErrModal(!showErrModal);
+            return;
+        }
 
         setLinks(prevLinks => {
             const nextLinks = [...prevLinks];
@@ -159,6 +165,8 @@ const Home = ({}) => {
                 </Button>
             </Modal.Footer>
         </Modal>
+
+        <ErrorModal setShow={setShowErrModal} show={showErrModal} status={errStatus}/>
 
         <form className="event-creator-form" onSubmit={handleSubmit}>
             <textarea id="event-creator-form-textarea-1" onChange={(e) => { setEventDetails(e.currentTarget.value) }} placeholder="Enter event details here"></textarea>

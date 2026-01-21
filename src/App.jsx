@@ -9,7 +9,7 @@ import NavMenu from './components/NavMenu';
 import WhopRedirect from './pages/WhopRedirect';
 import api from './api';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGear } from '@fortawesome/free-solid-svg-icons';
 import NavMenuMobile from './components/NavMenuMobile';
@@ -21,6 +21,23 @@ function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const navigate = useNavigate();
+  const menuRef = useRef(null);
+  const gearButtonRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (showMenu &&
+          menuRef.current &&
+          !menuRef.current.contains(event.target) &&
+          gearButtonRef.current &&
+          !gearButtonRef.current.contains(event.target)) {
+        setShowMenu(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showMenu]);
 
   const checkViewport = (showMenu, setShowMenu) => {
     if(window.innerWidth < 768) {
@@ -35,11 +52,11 @@ function App() {
       <header>
         <nav className='navbar'>
           <a href="#" onClick={() => navigate('/')}>Event Link Creator</a>
-          {isAuthorized && <button onClick={()=>checkViewport(showMenu, setShowMenu)}><FontAwesomeIcon icon={faGear} /></button>}
+          {isAuthorized && <button ref={gearButtonRef} onClick={()=>checkViewport(showMenu, setShowMenu)}><FontAwesomeIcon icon={faGear} /></button>}
         </nav>
       </header>
 
-      {showMenu && <NavMenu setIsAuthorized={setIsAuthorized}/>}
+      {showMenu && <NavMenu ref={menuRef} setIsAuthorized={setIsAuthorized}/>}
       <NavMenuMobile
         setIsAuthorized={setIsAuthorized}
         show={showMobileMenu}

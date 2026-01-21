@@ -43,7 +43,9 @@ form {
     justify-content: center;
     flex-direction: column;
     margin: 8% 0 0 0;
-    background-color: rgb(245, 245, 245);
+    background: #001757;
+    background: linear-gradient(175deg, rgba(0, 23, 87, 1) 0%, rgba(0, 15, 77, 1) 52%, rgba(0, 25, 69, 1) 100%);
+    border: 2px solid rgb(0, 0, 109);
     padding: 1.5rem;
     border-radius: 13px;
     width: 90%;

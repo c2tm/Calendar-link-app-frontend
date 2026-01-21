@@ -4,6 +4,42 @@
     max-width: 400px;
 }
 
+.account-edit-form .input-group-text {
+    background-color: rgba(0, 15, 60, 1);
+    border: 1px solid rgb(0, 0, 109);
+    color: white;
+}
+
+.account-edit-form .form-control {
+    background-color: rgba(0, 12, 46, 1);
+    border: 1px solid rgb(0, 0, 109);
+    color: white;
+}
+
+.account-edit-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.account-edit-form .form-control:focus {
+    background-color: rgba(0, 12, 46, 1);
+    color: white;
+    border-color: rgb(0, 100, 200);
+    box-shadow: 0 0 0 0.2rem rgba(0, 100, 200, 0.25);
+}
+
+.account-edit-form .btn {
+    background: #0006b3;
+    background: linear-gradient(174deg, rgba(0, 6, 179, 1) 0%, rgba(0, 27, 133, 1) 52%, rgba(0, 43, 117, 1) 100%);
+    border: 2px solid rgb(14, 1, 75);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.account-edit-form .btn:hover {
+    background: #00058c;
+    background: linear-gradient(174deg, rgba(0, 5, 140, 1) 0%, rgba(0, 19, 97, 1) 52%, rgba(0, 33, 89, 1) 100%);
+}
+
 /* Divider with fade effect */
 .divider-line {
     height: 1px;
@@ -31,7 +67,7 @@
 }
 
 .scrolling-placeholder-input:focus {
-    background: #fff !important;
+    background: rgba(0, 12, 46, 1) !important;
 }
 
 .scrolling-placeholder {
@@ -46,11 +82,11 @@
     pointer-events: none;
     overflow: hidden;
     z-index: 0;
-    background: #fff !important;
+    background: rgba(0, 12, 46, 1) !important;
 }
 
 .scrolling-placeholder span {
-    color: #474747;
+    color: rgba(255, 255, 255, 0.5);
     white-space: nowrap;
     animation: scroll-placeholder 8s linear infinite;
     font-size: 14px;
