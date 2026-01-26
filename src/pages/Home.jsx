@@ -71,6 +71,7 @@ const Home = ({}) => {
 
         const res = await api.post("/api/getEventLink/", {
                 event_details: eventDetails,
+                timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
                 platforms: platformsToSend
         }).catch((error) => {
             const errorObj = typeof error.response.data === "string" ? JSON.parse(error.response.data) : error.response.data;
