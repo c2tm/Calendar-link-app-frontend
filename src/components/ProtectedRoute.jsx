@@ -18,6 +18,10 @@ function ProtectedRoute({children, isAuthorized, setIsAuthorized, userInfo, setU
             if(res.status === 200) {
                 localStorage.setItem(ACCESS_TOKEN, res.data.access);
                 setIsAuthorized(true);
+                const decoded = jwtDecode(res.data.access);
+                if(!userInfo) {
+                    getUserInfo(decoded.user_id);
+                }
             } else {
                 setIsAuthorized(false);
             }
@@ -42,17 +46,18 @@ function ProtectedRoute({children, isAuthorized, setIsAuthorized, userInfo, setU
         } else {
             setIsAuthorized(true);
             if(!userInfo) {
-                getUserInfo();
+                getUserInfo(decoded.user_id);
             }
         }
     }
 
-    async function getUserInfo() {
-        const response = await api.get('/api/getOrUpdateUser/6/').catch((error) => {
-          console.log("error", error)
-        });
-        const data = await response.data;
-        setUserInfo(data)
+    async function getUserInfo(userId) {
+        try {
+            const response = await api.get(`/api/getOrUpdateUser/${userId}/`);
+            setUserInfo(response.data);
+        } catch (error) {
+            console.error("Error fetching user info:", error);
+        }
     }
 
     if(isAuthorized === null) {
